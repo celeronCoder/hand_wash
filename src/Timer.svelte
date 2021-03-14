@@ -1,9 +1,9 @@
 <script>
   import ProgressBar from "./ProgressBar.svelte";
+  let progress = 90;
 </script>
 
-<h2>Seconds Left:</h2>
-<ProgressBar />
+<ProgressBar {progress} />
 <div class="btnContainer">
   <button class="timerBtn">Start Timer</button>
 </div>
