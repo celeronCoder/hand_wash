@@ -2,6 +2,7 @@
   import ProgressBar from "./ProgressBar.svelte";
 </script>
 
+<h2>Seconds Left:</h2>
 <ProgressBar />
 <div class="btnContainer">
   <button class="timerBtn">Start Timer</button>
