@@ -1,8 +1,10 @@
-<script></script>
+<script>
+  export let progress;
+</script>
 
 <div class="component-container">
   <div class="progress-container">
-    <div class="progress-bar" style="width:{30}%">
+    <div class="progress-bar" style="width:{progress}%">
       <span class="sr-only" />
     </div>
   </div>
