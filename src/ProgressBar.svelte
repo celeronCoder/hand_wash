@@ -1,5 +1,5 @@
 <script>
-  export let progress;
+  export let progress = 20;
 </script>
 
 <div class="component-container">
