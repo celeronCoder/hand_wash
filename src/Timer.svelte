@@ -3,19 +3,19 @@
   let progress = 0;
   function startTimer() {
     let timer = setInterval(() => {
-      progress++;
       if (progress === 100) {
-        progress = 0;
-        clearInterval(timer);
-      }
+        setTimeout(() => {
+          progress = 0;
+          clearInterval(timer);
+        }, 1000);
+      } else progress++;
     }, 200);
   }
-
 </script>
 
 <ProgressBar {progress} />
 <div class="btnContainer">
-  <button on:click='{startTimer}' class="timerBtn">Start Timer</button>
+  <button on:click={startTimer} class="timerBtn">Start Timer</button>
 </div>
 
 <style>
