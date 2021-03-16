@@ -8,9 +8,7 @@
           progress = 0;
           clearInterval(timer);
         }, 1000);
-      } else {
-        progress++;
-      }
+      } else progress++;
     }, 200);
   }
 </script>
