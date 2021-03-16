@@ -1,11 +1,21 @@
 <script>
   import ProgressBar from "./ProgressBar.svelte";
-  let progress = 90;
+  let progress = 0;
+  function startTimer() {
+    let timer = setInterval(() => {
+      progress++;
+      if (progress === 100) {
+        progress = 0;
+        clearInterval(timer);
+      }
+    }, 200);
+  }
+
 </script>
 
 <ProgressBar {progress} />
 <div class="btnContainer">
-  <button class="timerBtn">Start Timer</button>
+  <button on:click='{startTimer}' class="timerBtn">Start Timer</button>
 </div>
 
 <style>
